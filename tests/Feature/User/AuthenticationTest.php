@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Testing\Fluent\AssertableJson;
+use Laravel\Passport\Passport;
 use Tests\TestCase;
 
 class AuthenticationTest extends TestCase
@@ -15,7 +16,8 @@ class AuthenticationTest extends TestCase
      *
      * @return void
      */
-    public function testUserCanLogin(){
+    public function testUserCanLogin()
+    {
 
         $user = User::factory()->create();
 
@@ -25,13 +27,29 @@ class AuthenticationTest extends TestCase
         ]);
 
         $response->assertStatus(200);
-        $response->assertJson(function (AssertableJson $json){
+        $response->assertJson(function (AssertableJson $json) {
             $json->has('token')
                 ->has('user')
                 ->has('message')
                 ->has('status')
                 ->etc();
         });
+    }
 
+    public function testUserCanLogOut()
+    {
+        $this->withoutExceptionHandling();
+        $user = User::factory()->create();
+
+        Passport::actingAs($user, ['user'], 'user-api');
+
+        $response = $this->getJson(route('user.logout'));
+
+        $response->assertStatus(200);
+        $response->assertJson(function (AssertableJson $json) {
+            $json->has('message')
+                ->has('status')
+                ->etc();
+        });
     }
 }
