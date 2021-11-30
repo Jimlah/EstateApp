@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\User\Auth;
+namespace App\Http\Controllers\Manager\Auth;
 
-use App\Http\Controllers\Controller;
-use Auth;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class LogOutController extends Controller
 {
@@ -13,7 +13,7 @@ class LogOutController extends Controller
         $user = Auth::user();
 
         $user->token()->revoke();
-        Auth::guard('user')->logout();
+        Auth::guard('manager')->logout();
 
         return response()->json([
             'message' => 'Logged out successfully',
