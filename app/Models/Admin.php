@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\MutatePasswordAttribute;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -10,6 +11,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Admin extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+    use MutatePasswordAttribute;
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +19,8 @@ class Admin extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
         'password',
     ];
