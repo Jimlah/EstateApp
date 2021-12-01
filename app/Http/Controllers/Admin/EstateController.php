@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\EstateResource;
 use App\Http\Requests\StoreEstateRequest;
+use App\Http\Requests\UpdateEstateRequest;
 
 class EstateController extends Controller
 {
@@ -30,7 +31,7 @@ class EstateController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreEstateRequest $request)
     {
         $estate = Estate::create($request->only('name', 'address', 'logo', 'code'));
         $manager = Manager::create([
@@ -54,9 +55,9 @@ class EstateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Estate $estate)
     {
-        //
+        return response()->json(new EstateResource($estate->load(['managers'])));
     }
 
     /**
@@ -66,9 +67,14 @@ class EstateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateEstateRequest $request, Estate $estate)
     {
-        //
+        $estate->update($request->only('name', 'address', 'logo', 'code'));
+
+        return response()->json([
+            'message' => 'Estate updated successfully',
+            'status' => 'success',
+        ], 200);
     }
 
     /**
@@ -77,8 +83,13 @@ class EstateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Estate $estate)
     {
-        //
+        $estate->delete();
+
+        return response()->json([
+            'message' => 'Estate deleted successfully',
+            'status' => 'success',
+        ], 200);
     }
 }
