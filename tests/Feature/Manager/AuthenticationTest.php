@@ -18,7 +18,6 @@ class AuthenticationTest extends TestCase
      */
     public function testManagerCanLogin()
     {
-
         $manager = Manager::factory()->create();
 
         $response = $this->postJson(route('manager.login'), [
@@ -38,7 +37,6 @@ class AuthenticationTest extends TestCase
 
     public function testManagerCanLogOut()
     {
-        $this->withoutExceptionHandling();
         $manager = Manager::factory()->create();
 
         Passport::actingAs($manager, ['manager'], 'manager-api');

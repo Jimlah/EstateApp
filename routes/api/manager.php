@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\Manager\AdminController;
 use App\Http\Controllers\Manager\Auth\LogInController;
 use App\Http\Controllers\Manager\Auth\LogOutController;
 
 
 Route::post('manager/login', LogInController::class)->name('manager.login');
-Route::group(['prefix' => 'manager', 'middleware' => ['auth:manager-api', 'scopes:manager']], function () {
-    Route::get('/logout', LogOutController::class)->name('manager.logout');
+Route::group(['prefix' => 'manager', 'middleware' => ['auth:manager-api', 'scopes:manager'], 'as' => 'manager.'], function () {
+    Route::get('/logout', LogOutController::class)->name('logout');
+
+    Route::apiResource('managers', AdminController::class);
 });

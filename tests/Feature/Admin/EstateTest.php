@@ -2,13 +2,13 @@
 
 namespace Tests\Feature\Admin;
 
+use Tests\TestCase;
 use App\Models\Admin;
 use App\Models\Estate;
 use App\Models\Manager;
-use Database\Seeders\EstateManagerSeeder;
-use Illuminate\Testing\Fluent\AssertableJson;
 use Laravel\Passport\Passport;
-use Tests\TestCase;
+use Database\Seeders\EstateSeeder;
+use Illuminate\Testing\Fluent\AssertableJson;
 
 class EstateTest extends TestCase
 {
@@ -33,7 +33,7 @@ class EstateTest extends TestCase
 
     public function testAdminCanGetAllEstate()
     {
-        $this->seed(EstateManagerSeeder::class);
+        $this->seed(EstateSeeder::class);
         $admin =  Admin::factory()->create();
         Passport::actingAs($admin, ['admin'], 'admin-api');
 
@@ -50,7 +50,7 @@ class EstateTest extends TestCase
 
     public function testAdminCanGetEstateById()
     {
-        $this->seed(EstateManagerSeeder::class);
+        $this->seed(EstateSeeder::class);
         $admin =  Admin::factory()->create();
         Passport::actingAs($admin, ['admin'], 'admin-api');
 
@@ -68,7 +68,7 @@ class EstateTest extends TestCase
 
     public function testAdminCanUpdateEstate()
     {
-        $this->seed(EstateManagerSeeder::class);
+        $this->seed(EstateSeeder::class);
         $admin =  Admin::factory()->create();
         Passport::actingAs($admin, ['admin'], 'admin-api');
 
@@ -85,7 +85,7 @@ class EstateTest extends TestCase
 
     public function testAdminCanDeleteEstate()
     {
-        $this->seed(EstateManagerSeeder::class);
+        $this->seed(EstateSeeder::class);
         $admin =  Admin::factory()->create();
         Passport::actingAs($admin, ['admin'], 'admin-api');
 

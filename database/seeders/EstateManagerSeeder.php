@@ -15,8 +15,8 @@ class EstateManagerSeeder extends Seeder
      */
     public function run()
     {
-        Estate::factory(10)->create()->each(function ($estate) {
-            $estate->managers()->save(Manager::factory()->create());
+        Estate::all()->each(function (Estate $estate) {
+            $estate->managers()->save(Manager::factory()->make(['is_admin' => true]));
         });
     }
 }
