@@ -25,7 +25,7 @@ class UpdateEstateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:managers,emails,except,id'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:managers,email,except,id'],
             'name' => ['required', 'string', 'max:255'],
             'address' => ['required', 'string', 'max:255'],
             'logo' => ['required'],

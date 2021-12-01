@@ -18,7 +18,6 @@ class AuthenticationTest extends TestCase
      */
     public function testAdminCanLogin()
     {
-
         $admin = Admin::factory()->create();
 
         $response = $this->postJson(route('admin.login'), [
@@ -38,7 +37,6 @@ class AuthenticationTest extends TestCase
 
     public function testAdminCanLogOut()
     {
-        $this->withoutExceptionHandling();
         $admin = Admin::factory()->create();
 
         Passport::actingAs($admin, ['admin'], 'admin-api');
