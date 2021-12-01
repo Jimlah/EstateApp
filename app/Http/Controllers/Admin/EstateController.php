@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreEstateRequest;
 use App\Models\Estate;
 use App\Models\Manager;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Str;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\EstateResource;
+use App\Http\Requests\StoreEstateRequest;
 
 class EstateController extends Controller
 {
@@ -18,7 +19,9 @@ class EstateController extends Controller
      */
     public function index()
     {
-        //
+        $estates = Estate::with(['managers'])->paginate(10);
+
+        return response()->json(EstateResource::collection($estates)->response()->getData());
     }
 
     /**
