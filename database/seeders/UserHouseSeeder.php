@@ -17,7 +17,12 @@ class UserHouseSeeder extends Seeder
     {
         House::all()->each(function (House $house) {
             $house->users()->save(User::factory()->make(['is_admin' => true]));
-            $house->users()->saveMany(User::factory()->count(rand(1, 3))->make());
+
+            $users = $house->users()->saveMany(User::factory()->count(rand(1, 3))->make());
+
+            foreach ($users as $user) {
+                $user->houses()->updateExistingPivot($house->id, ['is_admin' => false]);
+            }
         });
     }
 }

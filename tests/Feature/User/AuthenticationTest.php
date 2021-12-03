@@ -43,7 +43,7 @@ class AuthenticationTest extends TestCase
 
         Passport::actingAs($user, ['user'], 'user-api');
 
-        $response = $this->getJson(route('user.logout'));
+        $response = $this->getJson(route('user.user.logout'));
 
         $response->assertStatus(200);
         $response->assertJson(function (AssertableJson $json) {
