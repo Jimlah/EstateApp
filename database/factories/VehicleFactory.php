@@ -18,7 +18,7 @@ class VehicleFactory extends Factory
         return [
             'name' => $this->faker->vehicle,
             'model' => $this->faker->vehicleModel,
-            'color' => $this->faker->vehicleColor,
+            'color' => $this->faker->colorName,
             'license_plate' => $this->faker->vehicleRegistration,
             'type' => $this->faker->vehicleType,
          ];
