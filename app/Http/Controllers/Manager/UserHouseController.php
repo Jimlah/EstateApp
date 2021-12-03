@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Manager;
 
+use App\Models\User;
+use App\Models\House;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
-use App\Models\House;
-use Illuminate\Http\Request;
+use App\Http\Requests\UserHouseRequest;
 
 class UserHouseController extends Controller
 {
@@ -27,9 +30,17 @@ class UserHouseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserHouseRequest $request, House $house)
     {
-        //
+        $data = array_merge($request->validated(), ['password' => Str::random(6)]);
+        $user = User::create($data);
+
+        $house->users()->attach($user->id, ['is_admin' => true]);
+
+        return response()->json([
+            'message' => 'User created successfully',
+            'status' => 'success'
+        ], 201);
     }
 
     /**
@@ -38,9 +49,11 @@ class UserHouseController extends Controller
      * @param  \App\Models\House  $house
      * @return \Illuminate\Http\Response
      */
-    public function show(House $house)
+    public function show(House $house, User $user)
     {
-        //
+        $user = $house->users()->findOrFail($user->id);
+
+        return response()->json(new UserResource($user));
     }
 
     /**
@@ -50,9 +63,15 @@ class UserHouseController extends Controller
      * @param  \App\Models\House  $house
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, House $house)
+    public function update(UserHouseRequest $request, House $house, User $user)
     {
-        //
+        $user = $house->users()->findOrFail($user->id);
+        $user->update($request->validated());
+
+        return response()->json([
+            'message' => 'User updated successfully',
+            'status' => 'success'
+        ], 200);
     }
 
     /**
@@ -61,8 +80,13 @@ class UserHouseController extends Controller
      * @param  \App\Models\House  $house
      * @return \Illuminate\Http\Response
      */
-    public function destroy(House $house)
+    public function destroy(House $house, User $user)
     {
-        //
+        $house->users()->detach();
+
+        return response()->json([
+            'message' => 'User deleted successfully',
+            'status' => 'success'
+        ], 200);
     }
 }
