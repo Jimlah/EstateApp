@@ -17,10 +17,11 @@ class CreateVisitorsTable extends Migration
         Schema::create('visitors', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
+            $table->foreignId('estate_id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('email')->unique()->nullable();
-            $table->string('phone')->unique()->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
             $table->string('address')->nullable();
             $table->string('sent_by')->default(User::class);
             $table->boolean('approved')->default(true);

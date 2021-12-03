@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Models\House;
+use App\Models\Manager;
+use App\Models\Visitor;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -25,5 +27,10 @@ class Estate extends Model
     public function houses()
     {
         return $this->hasMany(House::class);
+    }
+
+    public function visitors()
+    {
+        return $this->hasMany(Visitor::class);
     }
 }

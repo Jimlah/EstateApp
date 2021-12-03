@@ -16,7 +16,10 @@ class VisitorSeeder extends Seeder
     public function run()
     {
         User::all()->each(function (User $user) {
-            $user->visitors()->saveMany(Visitor::factory()->count(rand(1, 5))->make());
+            $estate = $user->houses->random()->estate;
+            $user->visitors()->saveMany(Visitor::factory()->count(rand(1, 5))->make([
+                'estate_id' => $estate->id,
+            ]));
         });
     }
 }
