@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\House;
+use App\Models\Visitor;
 use Laravel\Passport\HasApiTokens;
 use App\Traits\MutatePasswordAttribute;
 use Illuminate\Notifications\Notifiable;
@@ -54,5 +55,10 @@ class User extends Authenticatable
     public function vehicles()
     {
         return $this->hasMany(Vehicle::class);
+    }
+
+    public function visitors()
+    {
+        return $this->hasMany(Visitor::class);
     }
 }
