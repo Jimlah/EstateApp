@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 8.74.0.
+ * Generated for Laravel 8.73.2.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -393,17 +393,6 @@
         {
                         /** @var \Illuminate\Foundation\Application $instance */
                         return $instance->runningUnitTests();
-        }
-                    /**
-         * Determine if the application is running with debug mode enabled.
-         *
-         * @return bool 
-         * @static 
-         */ 
-        public static function hasDebugModeEnabled()
-        {
-                        /** @var \Illuminate\Foundation\Application $instance */
-                        return $instance->hasDebugModeEnabled();
         }
                     /**
          * Register all of the configured providers.
@@ -11783,7 +11772,6 @@
      * @method static \Illuminate\Routing\RouteRegistrar name(string $value)
      * @method static \Illuminate\Routing\RouteRegistrar namespace(string|null $value)
      * @method static \Illuminate\Routing\RouteRegistrar prefix(string $prefix)
-     * @method static \Illuminate\Routing\RouteRegistrar scopeBindings()
      * @method static \Illuminate\Routing\RouteRegistrar where(array $where)
      * @see \Illuminate\Routing\Router
      */ 
@@ -13931,7 +13919,7 @@
          * Write the contents of a file.
          *
          * @param string $path
-         * @param \Psr\Http\Message\StreamInterface|\Illuminate\Http\File|\Illuminate\Http\UploadedFile|string|resource $contents
+         * @param string|resource $contents
          * @param mixed $options
          * @return bool 
          * @static 
