@@ -30,6 +30,8 @@ class VisitorRequest extends FormRequest
             'email' => 'sometimes|email|max:255',
             'phone' => 'sometimes|max:255',
             'estate_id' => 'sometimes|exists:estates,id',
+            'user_id' => 'sometimes|exists:users,id',
+            'sent_by' => 'sometimes',
         ];
     }
 }
