@@ -1,0 +1,2060 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "EstateApp.test"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "0df2cac5-66ed-438f-8785-da28f1c7a0d5",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/admin\/login",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/login",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/admin\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"isaac43@example.com\",\"password\":\"c\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/admin\/logout",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/logout",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/admin\/logout"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/estates",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/admin\/estates"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/estates",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/admin\/estates"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"syhyvonzwxsgjstkfouhorlmguopojvsbtudllwgvwpqkpblkryabfgsxegfdbzzkpalpi\",\"email\":\"ypzyayvwuafzxhqvrxzfxhgzbgjdfmxvdoepxruqeefxtngzrtanpzxonwcufztylioffwhnudmgpriaqesmjbbtlluifiqzsooxeephipmmvvnrghecopfwfkxojgdrizcuomwfmptdsabhwwdliaybyfdjgyxgzirwuzuwpeaxduavygtgioomdadn\",\"address\":\"ixyqoejhxpvsgosmafwcwvjgdnfleqnrplpqlxefvcjxcozduftfexucfhiharrnxurhoyiftgtejsqmtfankvkegcohwfsultixnpgpjyjiqenrdmvwblwpbmvhvnfspvuuyqermcrcuknklmtpcgbyphctelfzyjnvdautwzxcpcuqvcdnmrjgkzxkhedfdliyqiobjtjplhwmqomzzqwmxmbvemxwplsesjmvmknysrnfuigfujceyzpeig\",\"logo\":\"dolores\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/estates\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/admin\/estates\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "10",
+                                    "description": "The ID of the estate."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/estates\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/admin\/estates\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "16",
+                                    "description": "The ID of the estate."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"rdmnmhpu\",\"email\":\"usatlpiptpjaxnbuucrlhruq\",\"address\":\"ztlfhsuojngmligffxodsxpfrqtruspaugrsmqswkjbstefbosemphuawjkuqcpjqrxyebtpqmuvlseutdgqidmukojzaeprcinhtpxugjjgmkquueejfjulqkwnqpgpuhbzofjzjyciohnjfiwktpgqljxqyxianbubhoiejxgpxecmjwuqpecyoohnxtezopjnaeyjryemfvdjncbzuzvsoie\",\"logo\":\"explicabo\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/estates\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/admin\/estates\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "6",
+                                    "description": "The ID of the estate."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/user\/login",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/login",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"botsford.imani@example.com\",\"password\":\"aefko\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/user\/logout",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/logout",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/logout"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/users",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/users",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/users"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"un\",\"last_name\":\"sqcu\",\"email\":\"asdnihukelfetkbwmkw\",\"house_id\":\"illum\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/users\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "6",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/users\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "4",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"vtieauhvbkfunbomdwedbqyoryizxylfavhl\",\"last_name\":\"ebwhjwhjtgekgnvceelunhafcxhdbhjubewfagiiro\",\"email\":\"qosscvuxrsmdtgiwgpufdafhvogjoavrlddawfkqvdztlwgwmpxcupsrqsxaivwwqrkvonvfwpuucujqiuxrrkwagsbsrkwijhkmttrmqiyidp\",\"house_id\":\"sunt\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/users\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "2",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/vehicles",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/vehicles"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/vehicles",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/vehicles"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"sccoszsblutuprlhvdbeniupc\",\"model\":\"sdwalmyabhsyvwlkusnpjlzyyqiuhgyrtmvvhmcjfamnzkustwaakpupurzxbdfflrcmgfeyllqrxcihwrrafywvkvavwbdjxcqotxakrgwaxcmszwrrtmpmcwxnlhvpljiwvinmsxpequpwgnrcnymoomliyyxzrrkpnyl\",\"color\":\"cqgawtovtvkkbaatacvkjmwcwbrjetxwzadvjcyccezmalvqijqnxhuoaifrrhloubhvpsowldjmjotabrn\",\"license_plate\":\"xrgijwsdajiqzxvkfkagyfnghbukzqhowhdqnvqtgslwezeiepmdjbgugfsacpbzygncqifesfyjfzsmpjldiiuryxcszdueuowhtaqn\",\"type\":\"pnnleejodotihrxwyldyfvpyxrqoibotblyceqpozmgzaeoydgrmsengjbxvgxuivqznckugkniyuchllajwfkongpymftpzmexizwhnoegkxmxvhdlzjbvaneomitrdfczcftivtnrkxektaexihzcvnvezizcgnyyjorvxqrrtvieihwazsykjmmu\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/vehicles\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/vehicles\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "20",
+                                    "description": "The ID of the vehicle."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"htcpddkekpstnidujjqrymnbncglqamkbjeihxudy\",\"model\":\"zbmtarbibxyolbrwzbbpewikascqclmdiptmrdrcymkfkrehdwbvzlqfxnoicvhjtxjvpkpfoixvsxlr\",\"color\":\"kvyxpzdxjlchuhckaumbmxduenwobddedoyguxtyomfeexrqycwplceddazjetqhzsiexxbzppwblvelvgzfcnncjwoxrhrcihnuoawrddwiowfjffjdyvrlaixmlcmpjbufahxnbhddpwxqalevdgmjfbsrxqhckystnbocvbwfahegtjgtxamwfcbacbcuppqbtlhmlskeyczzboobbwyluafakbzthflzeedrdszreyvnevfkykuooqnpdct\",\"license_plate\":\"alydvsrjbktjtpxsmjafmqtpfbrmeske\",\"type\":\"ytmlzferiopaozqoigafovrxvhkrhwypnvsacemiyfruemqdywherfdxyhlpjljxifxvyjsniqifsbruokmsmzdyvvtscvuplrnqsmravdmjjaygwdlktppncduxnhktqpeihxbbkecyxgwbrjrphbdyedmxkmfdyjpwdzsagdbsfgngvjrmg\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/vehicles\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/vehicles\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "16",
+                                    "description": "The ID of the vehicle."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/visitors",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/visitors"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/visitors",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/visitors"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"ainjiuhooflkzwmpxmfbpyafwslbbomlakcopegnxnazegtjoixouffvesd\",\"last_name\":\"nvmpsbgmmdwiwsaibznopsyvnucpkjapmzphcctkeltgneeheuvvyvmimctzefecoisuxeuegovknpvvftnapxxantjmlxqrxbsrfzlcsyyceym\",\"address\":\"ucxgzeszsbyrbesabcxplhtzptihnayujvsrqscwuozbrfxvldjvhznfwyrcxvvddznjbtiheicijxcnhfqwxqvoglnzbfvzdtivwazhbbzfekaysuqimigjxxzrvxxgzmvaujahqjclskafcbrevjieoxxicwxkklgshgxqobuapfberwqbswljyflafhcodzwvjszeojjs\",\"email\":\"oeqfdulsumzjevvlcplh\",\"phone\":\"lhiwjsqjxuteyjferugsgbkzgpmvtlkccsokjesxhgekseygmntvgyjhvkaqgndmbetamfxunrbaeboaexepkxthjmcdvvertogsphwejhtotkgocexzykclycheedphvxzjwlfurbxyobsvrdbbwijiogbxwpnjarcgdgtpxmscizgxbqijlbqrinjjgtkldhqwuxcnspgnnz\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/visitors\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/visitors\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "18",
+                                    "description": "The ID of the visitor."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/visitors\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/visitors\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "4",
+                                    "description": "The ID of the visitor."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"wlyfrrogkdchbgnlcjivtnyjujqccbxukxxzvarktdmzetgzrshuwsccyfdxrvjggrfokwpvckpdhhapwrcrrvwulsxzzzqqbibvvjdwcymsgvfjhdonbrecxaeismiyxqkotmlehydwepcsczvcofxxwprsgfrwcxbwwilhdcejxgrijwfkpntssfinprohbofizlpuyrgxotjasrompx\",\"last_name\":\"solkirozkekpbglezqbiunviwhejgydtcgjuezfpvsfbwcdfvbdgjychbodngknuttwemnmpvvtngzfxeumirvhmbgfvpsvrhtgemglabatgmkpxvyefnsapaihqbuzgccquqlvjbctwfsqotqklregdqyhtwzbcvvmgxbgduoyytvdfvvmkqdmavldjkzwkwjsazimksdmrfjcrjzhuvl\",\"address\":\"tcbzferetnjgkvfmojmrpgkdafkwtrtpmwnwpzfuwhxpspkagvckuhrglxibhcqdbuhywhhfhtrvrcqbwsnylthsfxpteqapfrhksrxcwuhgckkeayiroithjiurswumflewqgaphurspcaztjxfoukqbhcygrpvnmjdj\",\"email\":\"wfowlxqxbisfelbotisvfqotgjfahnofvvrweelvmjneewkkjfxxrqwnntgegxbolkkufzxccnzioaqsgvxdeeadwmkshyjekjegypedprdlhiwqsyucnmiykpgtjyzsortcykchfoqxeazrvhermtavytensrwjrpnrwrwuezha\",\"phone\":\"wyvafslppmrldqfivxdwwajjxuyfurzskugjsdnxmotluofxmziu\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/visitors\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/visitors\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "4",
+                                    "description": "The ID of the visitor."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/manager\/login",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/login",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"bergstrom.stanford@example.org\",\"password\":\"q\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/manager\/logout",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/logout",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/logout"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/managers",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/managers"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/managers",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/managers"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/managers\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/managers\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "14",
+                                    "description": "The ID of the manager."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/managers\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/managers\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "8",
+                                    "description": "The ID of the manager."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/managers\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/managers\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "6",
+                                    "description": "The ID of the manager."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/houses",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/houses"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/houses",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/houses"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"description\":\"zzjqhmegkpuyngswpalebthrsyctwqcmxjyevckluqkgcpokqewylkmxplwjrnjvgs\",\"address\":\"eoesutcpsyoukkyoetnxvcnsflxmtdmcfqpjlnygozuvlpelf\",\"category\":\"xqvmfqokdvesqbgfifigyyvswxtqraebcuxkcdnwdtgqvebaahdzefczyemqrnifjmaemnllvpeutkwdctaonuyqxgdolrssvakaiodqmysxnzdarbcvcxuxnrrdodyynchscphgmiurzjlobflreolmeopofborzteidtwhnducftnldhjiccmtrdqxpvahutkhlwnk\",\"estate_id\":17}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/houses\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/houses\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "18",
+                                    "description": "The ID of the house."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/houses\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/houses\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "2",
+                                    "description": "The ID of the house."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"description\":\"aecgxzguhsvzergtnmcurmuqjtnqvweskwkqvusykdihgqnoxymwfdryc\",\"address\":\"ylbegjyevnddhldrizawegbxyxgsbvafzemrepelkxltmrkykbgchyuaohuwgcvcbptovsiuxqbnscaewtqieincatqmtmigepdrykcnuazgyiuqcsaxkhgqsdimuzbjeobvvjzlvl\",\"category\":\"tdryhhhbydkvsozcnaftiabtsjrrtebgsapduaqxnfzvsnfheqdvlebvyblwxecmymjtjhropxidcsrqwdlynggfabsnbaakrmtehnhrdfvnkatmjkxkrvetlfhuvnofprhhuvecdlfonfptydxx\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/houses\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/houses\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "5",
+                                    "description": "The ID of the house."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/visitors",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/visitors"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/visitors",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/visitors"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"cxkruhpbbpzqyelemjhvigwonbqihocbwlhguiuhhloconnbkmchhjjepbghvkfujpyoyrhfbvqtertjxceuyzibopjabezahcvyuolubasmajklcfszrwcaugrqiififymjpuwoiwoihcpjmktsrwjipeprxhubrhjm\",\"last_name\":\"wrmmhhobjxawqcxvenptagvqsvqsjpdlkwpjulopvjogyuhkjtsqnovelpgaiqdwvzsxqadvssjiuwqzxnaeutbsifjldkcpbdulirfxexipuktlisdipfqmqzsaqjwtysdxqsfomdhlarhlbqxtiouwxonpkwdqrvmplmqwrqxkxrflffujazamgvojibzyzhduezbqxuleajygaxxqwmpehk\",\"address\":\"imzdznywehqxkyqnhwjuiyywgswgzmazcxysvfgagqfkvsbypmcdiiklwhlyrhkewywtrbybmbvoltjmcdkukxcdzxxuvjwlngsditmfbosmkalouajrfsjtwfamqxwjdincwwuvpyorscojayfrqllufytdjtogfhxtigkucxsuviweyszvgtocaguadqsjgwufjfausixukfbwduoleakhjubceacshnrtynkfdnddfszxwzldlpxf\",\"email\":\"zaxjqgurhdtqkywuxqenixdukszatnknxddbgqpjoycnnpyltduyotuohmgjrkzxxwxlbvaospvhivmrjcdeluo\",\"phone\":\"yfxjmkkqesqtatswepchwzdptrfciuxokacvyauzmbcjgbhttitepcpwemzykfmxofpiqgttotxxgqdzvoxuwbybgkexdu\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/visitors\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/visitors\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "16",
+                                    "description": "The ID of the visitor."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/visitors\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/visitors\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "9",
+                                    "description": "The ID of the visitor."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"rkhnbteqgfdvbikhbhzwbrsuqnpmttawrthomaxithskttnarftfdkpavcfthcxwvvkajaqgigcyjdedubgbtqmsstovgddvkhvgpyxaiuptcrxmmvcfxzfcroutpurcohxhpmpwjuyqygfulylfrsvfigzmkmgrxnqredhgvtqbrqywxhxhzdpakedtnjcqnqmpahzppdimmssrrrkagpvkupzidgmdd\",\"last_name\":\"xwaaolluuwjludbvaywirbuicqrrkvhvrmmgqrltcpavreidrelgcwdfzaslbjnzjvjmpsutuwmzhnaujanoohennzsmhmndhuxcevxxzchmszlsvsstiwrxvnvazyfhbcdbpngjvbugakhurfvtgvigtrmavbccjcjvcrdvqeivbhxbellmxvzlbfemzbnnjelkfdioyborimmmzxkwxkpgspjctpn\",\"address\":\"yifxqigrtciuyrnwoozdropxyeckmvqklqgyvsaujvovsamcfpbviohzkisyuhylouqzrpfxbrsrwdhzjndoqwwycgrgiuzktyzwpsgsge\",\"email\":\"xkxqgsghazbm\",\"phone\":\"szsdcovmzpmtoyqjtocibluparizfotzltesfpapamziryhwwjiqsjivodlyivigcbzuikzakmwvatcthphstgkonduunsyirrmlblajimvsynvhawcvfkpqjycktcogsjqxgwppmnizyclfmcstlyjtdvlqulniydgtodkqrgutaugqtcjolvoqidsvmieeszmjafzlijvb\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/visitors\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/visitors\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the visitor."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/manager\/vehicles",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/vehicles",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/vehicles"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/houses\/:house_id\/users",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/houses\/:house_id\/users",
+                            "variable": [
+                                {
+                                    "id": "house_id",
+                                    "key": "house_id",
+                                    "value": "9",
+                                    "description": "The ID of the house."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/houses\/:house\/users",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/houses\/:house\/users",
+                            "variable": [
+                                {
+                                    "id": "house",
+                                    "key": "house",
+                                    "value": "2",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"qoineuypugqhffvujurimmnswnzsietzwxttjhksyfxprbmykkjrmoektiohvdpxpmdnunzbyqwblyjmtbqkzhspxejgykdyspsopbjfmlziixzqsyspskdpmmqqgjnbaskaodcegcrfjuvhsodhtacrgolbjdrw\",\"last_name\":\"sdxplofslhkhwnnpnhxmqst\",\"email\":\"ersgavjptsavcafgujsvthipwolzfnlvuhtmmvnuyguohghuortgzvfyufogrnoqebfhpeubvbsdediximvqyfodvsoapuezrddtzrornvejykvkublkhapduarlmaiozoijzimbbutciqwwccdeqqh\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/houses\/:house_id\/users\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/houses\/:house_id\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "house_id",
+                                    "key": "house_id",
+                                    "value": "15",
+                                    "description": "The ID of the house."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "7",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/houses\/:house_id\/users\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/houses\/:house_id\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "house_id",
+                                    "key": "house_id",
+                                    "value": "8",
+                                    "description": "The ID of the house."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "10",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"ppxymldajvvni\",\"last_name\":\"frwjrxkhscufybyambibundtnsgtlnnubghbpbganpqknimrpdfscztopezwxklrchxtkqstnungcgqnahpmfhitdhoziayxezgkxezjwuhlqfqehleomlyhwyhhsaxjnryjnrcgmuqtcnlpiwephbfsehvibmbjdgqbblahfmldangerdxglkldfanhhbflru\",\"email\":\"zwitnquwerhsfuxror\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/manager\/houses\/:house_id\/users\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/manager\/houses\/:house_id\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "house_id",
+                                    "key": "house_id",
+                                    "value": "13",
+                                    "description": "The ID of the house."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "5",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

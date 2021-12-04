@@ -1,0 +1,1911 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://EstateApp.test'
+paths:
+  /api/user:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/admin/login:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: isaac43@example.com
+                password:
+                  type: string
+                  description: 'Must be at least 6 characters.'
+                  example: c
+              required:
+                - email
+                - password
+      security: []
+  /api/admin/logout:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/admin/estates:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: syhyvonzwxsgjstkfouhorlmguopojvsbtudllwgvwpqkpblkryabfgsxegfdbzzkpalpi
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: ypzyayvwuafzxhqvrxzfxhgzbgjdfmxvdoepxruqeefxtngzrtanpzxonwcufztylioffwhnudmgpriaqesmjbbtlluifiqzsooxeephipmmvvnrghecopfwfkxojgdrizcuomwfmptdsabhwwdliaybyfdjgyxgzirwuzuwpeaxduavygtgioomdadn
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ixyqoejhxpvsgosmafwcwvjgdnfleqnrplpqlxefvcjxcozduftfexucfhiharrnxurhoyiftgtejsqmtfankvkegcohwfsultixnpgpjyjiqenrdmvwblwpbmvhvnfspvuuyqermcrcuknklmtpcgbyphctelfzyjnvdautwzxcpcuqvcdnmrjgkzxkhedfdliyqiobjtjplhwmqomzzqwmxmbvemxwplsesjmvmknysrnfuigfujceyzpeig
+                logo:
+                  type: string
+                  description: ''
+                  example: dolores
+              required:
+                - name
+                - email
+                - address
+                - logo
+      security: []
+  '/api/admin/estates/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: rdmnmhpu
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: usatlpiptpjaxnbuucrlhruq
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ztlfhsuojngmligffxodsxpfrqtruspaugrsmqswkjbstefbosemphuawjkuqcpjqrxyebtpqmuvlseutdgqidmukojzaeprcinhtpxugjjgmkquueejfjulqkwnqpgpuhbzofjzjyciohnjfiwktpgqljxqyxianbubhoiejxgpxecmjwuqpecyoohnxtezopjnaeyjryemfvdjncbzuzvsoie
+                logo:
+                  type: string
+                  description: ''
+                  example: explicabo
+              required:
+                - name
+                - email
+                - address
+                - logo
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the estate.'
+        example: 10
+        required: true
+        schema:
+          type: integer
+  /api/user/login:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: botsford.imani@example.com
+                password:
+                  type: string
+                  description: 'Must be at least 6 characters.'
+                  example: aefko
+              required:
+                - email
+                - password
+      security: []
+  /api/user/logout:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/user/users:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: un
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: sqcu
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: asdnihukelfetkbwmkw
+                house_id:
+                  type: string
+                  description: ''
+                  example: illum
+              required:
+                - first_name
+                - last_name
+                - email
+                - house_id
+      security: []
+  '/api/user/users/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vtieauhvbkfunbomdwedbqyoryizxylfavhl
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ebwhjwhjtgekgnvceelunhafcxhdbhjubewfagiiro
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: qosscvuxrsmdtgiwgpufdafhvogjoavrlddawfkqvdztlwgwmpxcupsrqsxaivwwqrkvonvfwpuucujqiuxrrkwagsbsrkwijhkmttrmqiyidp
+                house_id:
+                  type: string
+                  description: ''
+                  example: sunt
+              required:
+                - first_name
+                - last_name
+                - email
+                - house_id
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 6
+        required: true
+        schema:
+          type: integer
+  /api/user/vehicles:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: sccoszsblutuprlhvdbeniupc
+                model:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: sdwalmyabhsyvwlkusnpjlzyyqiuhgyrtmvvhmcjfamnzkustwaakpupurzxbdfflrcmgfeyllqrxcihwrrafywvkvavwbdjxcqotxakrgwaxcmszwrrtmpmcwxnlhvpljiwvinmsxpequpwgnrcnymoomliyyxzrrkpnyl
+                color:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: cqgawtovtvkkbaatacvkjmwcwbrjetxwzadvjcyccezmalvqijqnxhuoaifrrhloubhvpsowldjmjotabrn
+                license_plate:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: xrgijwsdajiqzxvkfkagyfnghbukzqhowhdqnvqtgslwezeiepmdjbgugfsacpbzygncqifesfyjfzsmpjldiiuryxcszdueuowhtaqn
+                type:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: pnnleejodotihrxwyldyfvpyxrqoibotblyceqpozmgzaeoydgrmsengjbxvgxuivqznckugkniyuchllajwfkongpymftpzmexizwhnoegkxmxvhdlzjbvaneomitrdfczcftivtnrkxektaexihzcvnvezizcgnyyjorvxqrrtvieihwazsykjmmu
+              required:
+                - name
+                - model
+                - color
+                - license_plate
+                - type
+      security: []
+  '/api/user/vehicles/{id}':
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: htcpddkekpstnidujjqrymnbncglqamkbjeihxudy
+                model:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: zbmtarbibxyolbrwzbbpewikascqclmdiptmrdrcymkfkrehdwbvzlqfxnoicvhjtxjvpkpfoixvsxlr
+                color:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: kvyxpzdxjlchuhckaumbmxduenwobddedoyguxtyomfeexrqycwplceddazjetqhzsiexxbzppwblvelvgzfcnncjwoxrhrcihnuoawrddwiowfjffjdyvrlaixmlcmpjbufahxnbhddpwxqalevdgmjfbsrxqhckystnbocvbwfahegtjgtxamwfcbacbcuppqbtlhmlskeyczzboobbwyluafakbzthflzeedrdszreyvnevfkykuooqnpdct
+                license_plate:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: alydvsrjbktjtpxsmjafmqtpfbrmeske
+                type:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ytmlzferiopaozqoigafovrxvhkrhwypnvsacemiyfruemqdywherfdxyhlpjljxifxvyjsniqifsbruokmsmzdyvvtscvuplrnqsmravdmjjaygwdlktppncduxnhktqpeihxbbkecyxgwbrjrphbdyedmxkmfdyjpwdzsagdbsfgngvjrmg
+              required:
+                - name
+                - model
+                - color
+                - license_plate
+                - type
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the vehicle.'
+        example: 20
+        required: true
+        schema:
+          type: integer
+  /api/user/visitors:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ainjiuhooflkzwmpxmfbpyafwslbbomlakcopegnxnazegtjoixouffvesd
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: nvmpsbgmmdwiwsaibznopsyvnucpkjapmzphcctkeltgneeheuvvyvmimctzefecoisuxeuegovknpvvftnapxxantjmlxqrxbsrfzlcsyyceym
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ucxgzeszsbyrbesabcxplhtzptihnayujvsrqscwuozbrfxvldjvhznfwyrcxvvddznjbtiheicijxcnhfqwxqvoglnzbfvzdtivwazhbbzfekaysuqimigjxxzrvxxgzmvaujahqjclskafcbrevjieoxxicwxkklgshgxqobuapfberwqbswljyflafhcodzwvjszeojjs
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: oeqfdulsumzjevvlcplh
+                phone:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: lhiwjsqjxuteyjferugsgbkzgpmvtlkccsokjesxhgekseygmntvgyjhvkaqgndmbetamfxunrbaeboaexepkxthjmcdvvertogsphwejhtotkgocexzykclycheedphvxzjwlfurbxyobsvrdbbwijiogbxwpnjarcgdgtpxmscizgxbqijlbqrinjjgtkldhqwuxcnspgnnz
+                estate_id:
+                  type: string
+                  description: ''
+                  example: null
+                user_id:
+                  type: string
+                  description: ''
+                  example: null
+                sent_by:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - first_name
+                - last_name
+                - address
+      security: []
+  '/api/user/visitors/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: wlyfrrogkdchbgnlcjivtnyjujqccbxukxxzvarktdmzetgzrshuwsccyfdxrvjggrfokwpvckpdhhapwrcrrvwulsxzzzqqbibvvjdwcymsgvfjhdonbrecxaeismiyxqkotmlehydwepcsczvcofxxwprsgfrwcxbwwilhdcejxgrijwfkpntssfinprohbofizlpuyrgxotjasrompx
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: solkirozkekpbglezqbiunviwhejgydtcgjuezfpvsfbwcdfvbdgjychbodngknuttwemnmpvvtngzfxeumirvhmbgfvpsvrhtgemglabatgmkpxvyefnsapaihqbuzgccquqlvjbctwfsqotqklregdqyhtwzbcvvmgxbgduoyytvdfvvmkqdmavldjkzwkwjsazimksdmrfjcrjzhuvl
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: tcbzferetnjgkvfmojmrpgkdafkwtrtpmwnwpzfuwhxpspkagvckuhrglxibhcqdbuhywhhfhtrvrcqbwsnylthsfxpteqapfrhksrxcwuhgckkeayiroithjiurswumflewqgaphurspcaztjxfoukqbhcygrpvnmjdj
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: wfowlxqxbisfelbotisvfqotgjfahnofvvrweelvmjneewkkjfxxrqwnntgegxbolkkufzxccnzioaqsgvxdeeadwmkshyjekjegypedprdlhiwqsyucnmiykpgtjyzsortcykchfoqxeazrvhermtavytensrwjrpnrwrwuezha
+                phone:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: wyvafslppmrldqfivxdwwajjxuyfurzskugjsdnxmotluofxmziu
+                estate_id:
+                  type: string
+                  description: ''
+                  example: null
+                user_id:
+                  type: string
+                  description: ''
+                  example: null
+                sent_by:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - first_name
+                - last_name
+                - address
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the visitor.'
+        example: 18
+        required: true
+        schema:
+          type: integer
+  /api/manager/login:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: bergstrom.stanford@example.org
+                password:
+                  type: string
+                  description: 'Must be at least 6 characters.'
+                  example: q
+              required:
+                - email
+                - password
+      security: []
+  /api/manager/logout:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/manager/managers:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/manager/managers/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the manager.'
+        example: 14
+        required: true
+        schema:
+          type: integer
+  /api/manager/houses:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: zzjqhmegkpuyngswpalebthrsyctwqcmxjyevckluqkgcpokqewylkmxplwjrnjvgs
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: eoesutcpsyoukkyoetnxvcnsflxmtdmcfqpjlnygozuvlpelf
+                category:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: xqvmfqokdvesqbgfifigyyvswxtqraebcuxkcdnwdtgqvebaahdzefczyemqrnifjmaemnllvpeutkwdctaonuyqxgdolrssvakaiodqmysxnzdarbcvcxuxnrrdodyynchscphgmiurzjlobflreolmeopofborzteidtwhnducftnldhjiccmtrdqxpvahutkhlwnk
+                estate_id:
+                  type: integer
+                  description: ''
+                  example: 17
+              required:
+                - description
+                - address
+                - category
+                - estate_id
+      security: []
+  '/api/manager/houses/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: aecgxzguhsvzergtnmcurmuqjtnqvweskwkqvusykdihgqnoxymwfdryc
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ylbegjyevnddhldrizawegbxyxgsbvafzemrepelkxltmrkykbgchyuaohuwgcvcbptovsiuxqbnscaewtqieincatqmtmigepdrykcnuazgyiuqcsaxkhgqsdimuzbjeobvvjzlvl
+                category:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: tdryhhhbydkvsozcnaftiabtsjrrtebgsapduaqxnfzvsnfheqdvlebvyblwxecmymjtjhropxidcsrqwdlynggfabsnbaakrmtehnhrdfvnkatmjkxkrvetlfhuvnofprhhuvecdlfonfptydxx
+              required:
+                - description
+                - address
+                - category
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the house.'
+        example: 18
+        required: true
+        schema:
+          type: integer
+  /api/manager/visitors:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: cxkruhpbbpzqyelemjhvigwonbqihocbwlhguiuhhloconnbkmchhjjepbghvkfujpyoyrhfbvqtertjxceuyzibopjabezahcvyuolubasmajklcfszrwcaugrqiififymjpuwoiwoihcpjmktsrwjipeprxhubrhjm
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: wrmmhhobjxawqcxvenptagvqsvqsjpdlkwpjulopvjogyuhkjtsqnovelpgaiqdwvzsxqadvssjiuwqzxnaeutbsifjldkcpbdulirfxexipuktlisdipfqmqzsaqjwtysdxqsfomdhlarhlbqxtiouwxonpkwdqrvmplmqwrqxkxrflffujazamgvojibzyzhduezbqxuleajygaxxqwmpehk
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: imzdznywehqxkyqnhwjuiyywgswgzmazcxysvfgagqfkvsbypmcdiiklwhlyrhkewywtrbybmbvoltjmcdkukxcdzxxuvjwlngsditmfbosmkalouajrfsjtwfamqxwjdincwwuvpyorscojayfrqllufytdjtogfhxtigkucxsuviweyszvgtocaguadqsjgwufjfausixukfbwduoleakhjubceacshnrtynkfdnddfszxwzldlpxf
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: zaxjqgurhdtqkywuxqenixdukszatnknxddbgqpjoycnnpyltduyotuohmgjrkzxxwxlbvaospvhivmrjcdeluo
+                phone:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: yfxjmkkqesqtatswepchwzdptrfciuxokacvyauzmbcjgbhttitepcpwemzykfmxofpiqgttotxxgqdzvoxuwbybgkexdu
+                estate_id:
+                  type: string
+                  description: ''
+                  example: null
+                user_id:
+                  type: string
+                  description: ''
+                  example: null
+                sent_by:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - first_name
+                - last_name
+                - address
+      security: []
+  '/api/manager/visitors/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: rkhnbteqgfdvbikhbhzwbrsuqnpmttawrthomaxithskttnarftfdkpavcfthcxwvvkajaqgigcyjdedubgbtqmsstovgddvkhvgpyxaiuptcrxmmvcfxzfcroutpurcohxhpmpwjuyqygfulylfrsvfigzmkmgrxnqredhgvtqbrqywxhxhzdpakedtnjcqnqmpahzppdimmssrrrkagpvkupzidgmdd
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: xwaaolluuwjludbvaywirbuicqrrkvhvrmmgqrltcpavreidrelgcwdfzaslbjnzjvjmpsutuwmzhnaujanoohennzsmhmndhuxcevxxzchmszlsvsstiwrxvnvazyfhbcdbpngjvbugakhurfvtgvigtrmavbccjcjvcrdvqeivbhxbellmxvzlbfemzbnnjelkfdioyborimmmzxkwxkpgspjctpn
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: yifxqigrtciuyrnwoozdropxyeckmvqklqgyvsaujvovsamcfpbviohzkisyuhylouqzrpfxbrsrwdhzjndoqwwycgrgiuzktyzwpsgsge
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: xkxqgsghazbm
+                phone:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: szsdcovmzpmtoyqjtocibluparizfotzltesfpapamziryhwwjiqsjivodlyivigcbzuikzakmwvatcthphstgkonduunsyirrmlblajimvsynvhawcvfkpqjycktcogsjqxgwppmnizyclfmcstlyjtdvlqulniydgtodkqrgutaugqtcjolvoqidsvmieeszmjafzlijvb
+                estate_id:
+                  type: string
+                  description: ''
+                  example: null
+                user_id:
+                  type: string
+                  description: ''
+                  example: null
+                sent_by:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - first_name
+                - last_name
+                - address
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the visitor.'
+        example: 16
+        required: true
+        schema:
+          type: integer
+  /api/manager/vehicles:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/manager/houses/{house_id}/users':
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: house_id
+        description: 'The ID of the house.'
+        example: 9
+        required: true
+        schema:
+          type: integer
+  '/api/manager/houses/{house}/users':
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: qoineuypugqhffvujurimmnswnzsietzwxttjhksyfxprbmykkjrmoektiohvdpxpmdnunzbyqwblyjmtbqkzhspxejgykdyspsopbjfmlziixzqsyspskdpmmqqgjnbaskaodcegcrfjuvhsodhtacrgolbjdrw
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: sdxplofslhkhwnnpnhxmqst
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: ersgavjptsavcafgujsvthipwolzfnlvuhtmmvnuyguohghuortgzvfyufogrnoqebfhpeubvbsdediximvqyfodvsoapuezrddtzrornvejykvkublkhapduarlmaiozoijzimbbutciqwwccdeqqh
+              required:
+                - first_name
+                - last_name
+                - email
+      security: []
+    parameters:
+      -
+        in: path
+        name: house
+        description: ''
+        example: 2
+        required: true
+        schema:
+          type: integer
+  '/api/manager/houses/{house_id}/users/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ppxymldajvvni
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: frwjrxkhscufybyambibundtnsgtlnnubghbpbganpqknimrpdfscztopezwxklrchxtkqstnungcgqnahpmfhitdhoziayxezgkxezjwuhlqfqehleomlyhwyhhsaxjnryjnrcgmuqtcnlpiwephbfsehvibmbjdgqbblahfmldangerdxglkldfanhhbflru
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: zwitnquwerhsfuxror
+              required:
+                - first_name
+                - last_name
+                - email
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: house_id
+        description: 'The ID of the house.'
+        example: 15
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 7
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Endpoints
+    description: ''

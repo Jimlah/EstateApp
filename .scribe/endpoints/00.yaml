@@ -1,0 +1,1553 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/user
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/login
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: isaac43@example.com
+        type: string
+      password:
+        name: password
+        description: 'Must be at least 6 characters.'
+        required: true
+        example: c
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/logout
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/estates
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/estates
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: syhyvonzwxsgjstkfouhorlmguopojvsbtudllwgvwpqkpblkryabfgsxegfdbzzkpalpi
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: ypzyayvwuafzxhqvrxzfxhgzbgjdfmxvdoepxruqeefxtngzrtanpzxonwcufztylioffwhnudmgpriaqesmjbbtlluifiqzsooxeephipmmvvnrghecopfwfkxojgdrizcuomwfmptdsabhwwdliaybyfdjgyxgzirwuzuwpeaxduavygtgioomdadn
+        type: string
+      address:
+        name: address
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: ixyqoejhxpvsgosmafwcwvjgdnfleqnrplpqlxefvcjxcozduftfexucfhiharrnxurhoyiftgtejsqmtfankvkegcohwfsultixnpgpjyjiqenrdmvwblwpbmvhvnfspvuuyqermcrcuknklmtpcgbyphctelfzyjnvdautwzxcpcuqvcdnmrjgkzxkhedfdliyqiobjtjplhwmqomzzqwmxmbvemxwplsesjmvmknysrnfuigfujceyzpeig
+        type: string
+      logo:
+        name: logo
+        description: ''
+        required: true
+        example: dolores
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/estates/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the estate.'
+        required: true
+        example: 10
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/admin/estates/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the estate.'
+        required: true
+        example: 16
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: rdmnmhpu
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: usatlpiptpjaxnbuucrlhruq
+        type: string
+      address:
+        name: address
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: ztlfhsuojngmligffxodsxpfrqtruspaugrsmqswkjbstefbosemphuawjkuqcpjqrxyebtpqmuvlseutdgqidmukojzaeprcinhtpxugjjgmkquueejfjulqkwnqpgpuhbzofjzjyciohnjfiwktpgqljxqyxianbubhoiejxgpxecmjwuqpecyoohnxtezopjnaeyjryemfvdjncbzuzvsoie
+        type: string
+      logo:
+        name: logo
+        description: ''
+        required: true
+        example: explicabo
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/estates/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the estate.'
+        required: true
+        example: 6
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/user/login
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: botsford.imani@example.com
+        type: string
+      password:
+        name: password
+        description: 'Must be at least 6 characters.'
+        required: true
+        example: aefko
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/user/logout
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/user/users
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/user/users
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: un
+        type: string
+      last_name:
+        name: last_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: sqcu
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: asdnihukelfetkbwmkw
+        type: string
+      house_id:
+        name: house_id
+        description: ''
+        required: true
+        example: illum
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/user/users/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 6
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/user/users/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 4
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: vtieauhvbkfunbomdwedbqyoryizxylfavhl
+        type: string
+      last_name:
+        name: last_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: ebwhjwhjtgekgnvceelunhafcxhdbhjubewfagiiro
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: qosscvuxrsmdtgiwgpufdafhvogjoavrlddawfkqvdztlwgwmpxcupsrqsxaivwwqrkvonvfwpuucujqiuxrrkwagsbsrkwijhkmttrmqiyidp
+        type: string
+      house_id:
+        name: house_id
+        description: ''
+        required: true
+        example: sunt
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/user/users/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 2
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/user/vehicles
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/user/vehicles
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: sccoszsblutuprlhvdbeniupc
+        type: string
+      model:
+        name: model
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: sdwalmyabhsyvwlkusnpjlzyyqiuhgyrtmvvhmcjfamnzkustwaakpupurzxbdfflrcmgfeyllqrxcihwrrafywvkvavwbdjxcqotxakrgwaxcmszwrrtmpmcwxnlhvpljiwvinmsxpequpwgnrcnymoomliyyxzrrkpnyl
+        type: string
+      color:
+        name: color
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: cqgawtovtvkkbaatacvkjmwcwbrjetxwzadvjcyccezmalvqijqnxhuoaifrrhloubhvpsowldjmjotabrn
+        type: string
+      license_plate:
+        name: license_plate
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: xrgijwsdajiqzxvkfkagyfnghbukzqhowhdqnvqtgslwezeiepmdjbgugfsacpbzygncqifesfyjfzsmpjldiiuryxcszdueuowhtaqn
+        type: string
+      type:
+        name: type
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: pnnleejodotihrxwyldyfvpyxrqoibotblyceqpozmgzaeoydgrmsengjbxvgxuivqznckugkniyuchllajwfkongpymftpzmexizwhnoegkxmxvhdlzjbvaneomitrdfczcftivtnrkxektaexihzcvnvezizcgnyyjorvxqrrtvieihwazsykjmmu
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/user/vehicles/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the vehicle.'
+        required: true
+        example: 20
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: htcpddkekpstnidujjqrymnbncglqamkbjeihxudy
+        type: string
+      model:
+        name: model
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: zbmtarbibxyolbrwzbbpewikascqclmdiptmrdrcymkfkrehdwbvzlqfxnoicvhjtxjvpkpfoixvsxlr
+        type: string
+      color:
+        name: color
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: kvyxpzdxjlchuhckaumbmxduenwobddedoyguxtyomfeexrqycwplceddazjetqhzsiexxbzppwblvelvgzfcnncjwoxrhrcihnuoawrddwiowfjffjdyvrlaixmlcmpjbufahxnbhddpwxqalevdgmjfbsrxqhckystnbocvbwfahegtjgtxamwfcbacbcuppqbtlhmlskeyczzboobbwyluafakbzthflzeedrdszreyvnevfkykuooqnpdct
+        type: string
+      license_plate:
+        name: license_plate
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: alydvsrjbktjtpxsmjafmqtpfbrmeske
+        type: string
+      type:
+        name: type
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: ytmlzferiopaozqoigafovrxvhkrhwypnvsacemiyfruemqdywherfdxyhlpjljxifxvyjsniqifsbruokmsmzdyvvtscvuplrnqsmravdmjjaygwdlktppncduxnhktqpeihxbbkecyxgwbrjrphbdyedmxkmfdyjpwdzsagdbsfgngvjrmg
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/user/vehicles/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the vehicle.'
+        required: true
+        example: 16
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/user/visitors
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/user/visitors
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: ainjiuhooflkzwmpxmfbpyafwslbbomlakcopegnxnazegtjoixouffvesd
+        type: string
+      last_name:
+        name: last_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: nvmpsbgmmdwiwsaibznopsyvnucpkjapmzphcctkeltgneeheuvvyvmimctzefecoisuxeuegovknpvvftnapxxantjmlxqrxbsrfzlcsyyceym
+        type: string
+      address:
+        name: address
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: ucxgzeszsbyrbesabcxplhtzptihnayujvsrqscwuozbrfxvldjvhznfwyrcxvvddznjbtiheicijxcnhfqwxqvoglnzbfvzdtivwazhbbzfekaysuqimigjxxzrvxxgzmvaujahqjclskafcbrevjieoxxicwxkklgshgxqobuapfberwqbswljyflafhcodzwvjszeojjs
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: false
+        example: oeqfdulsumzjevvlcplh
+        type: string
+      phone:
+        name: phone
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: lhiwjsqjxuteyjferugsgbkzgpmvtlkccsokjesxhgekseygmntvgyjhvkaqgndmbetamfxunrbaeboaexepkxthjmcdvvertogsphwejhtotkgocexzykclycheedphvxzjwlfurbxyobsvrdbbwijiogbxwpnjarcgdgtpxmscizgxbqijlbqrinjjgtkldhqwuxcnspgnnz
+        type: string
+      estate_id:
+        name: estate_id
+        description: ''
+        required: false
+        example: null
+        type: string
+      user_id:
+        name: user_id
+        description: ''
+        required: false
+        example: null
+        type: string
+      sent_by:
+        name: sent_by
+        description: ''
+        required: false
+        example: null
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/user/visitors/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the visitor.'
+        required: true
+        example: 18
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/user/visitors/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the visitor.'
+        required: true
+        example: 4
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: wlyfrrogkdchbgnlcjivtnyjujqccbxukxxzvarktdmzetgzrshuwsccyfdxrvjggrfokwpvckpdhhapwrcrrvwulsxzzzqqbibvvjdwcymsgvfjhdonbrecxaeismiyxqkotmlehydwepcsczvcofxxwprsgfrwcxbwwilhdcejxgrijwfkpntssfinprohbofizlpuyrgxotjasrompx
+        type: string
+      last_name:
+        name: last_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: solkirozkekpbglezqbiunviwhejgydtcgjuezfpvsfbwcdfvbdgjychbodngknuttwemnmpvvtngzfxeumirvhmbgfvpsvrhtgemglabatgmkpxvyefnsapaihqbuzgccquqlvjbctwfsqotqklregdqyhtwzbcvvmgxbgduoyytvdfvvmkqdmavldjkzwkwjsazimksdmrfjcrjzhuvl
+        type: string
+      address:
+        name: address
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: tcbzferetnjgkvfmojmrpgkdafkwtrtpmwnwpzfuwhxpspkagvckuhrglxibhcqdbuhywhhfhtrvrcqbwsnylthsfxpteqapfrhksrxcwuhgckkeayiroithjiurswumflewqgaphurspcaztjxfoukqbhcygrpvnmjdj
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: false
+        example: wfowlxqxbisfelbotisvfqotgjfahnofvvrweelvmjneewkkjfxxrqwnntgegxbolkkufzxccnzioaqsgvxdeeadwmkshyjekjegypedprdlhiwqsyucnmiykpgtjyzsortcykchfoqxeazrvhermtavytensrwjrpnrwrwuezha
+        type: string
+      phone:
+        name: phone
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: wyvafslppmrldqfivxdwwajjxuyfurzskugjsdnxmotluofxmziu
+        type: string
+      estate_id:
+        name: estate_id
+        description: ''
+        required: false
+        example: null
+        type: string
+      user_id:
+        name: user_id
+        description: ''
+        required: false
+        example: null
+        type: string
+      sent_by:
+        name: sent_by
+        description: ''
+        required: false
+        example: null
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/user/visitors/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the visitor.'
+        required: true
+        example: 4
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/manager/login
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: bergstrom.stanford@example.org
+        type: string
+      password:
+        name: password
+        description: 'Must be at least 6 characters.'
+        required: true
+        example: q
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/manager/logout
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/manager/managers
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/manager/managers
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/manager/managers/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the manager.'
+        required: true
+        example: 14
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/manager/managers/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the manager.'
+        required: true
+        example: 8
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/manager/managers/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the manager.'
+        required: true
+        example: 6
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/manager/houses
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/manager/houses
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      description:
+        name: description
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: zzjqhmegkpuyngswpalebthrsyctwqcmxjyevckluqkgcpokqewylkmxplwjrnjvgs
+        type: string
+      address:
+        name: address
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: eoesutcpsyoukkyoetnxvcnsflxmtdmcfqpjlnygozuvlpelf
+        type: string
+      category:
+        name: category
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: xqvmfqokdvesqbgfifigyyvswxtqraebcuxkcdnwdtgqvebaahdzefczyemqrnifjmaemnllvpeutkwdctaonuyqxgdolrssvakaiodqmysxnzdarbcvcxuxnrrdodyynchscphgmiurzjlobflreolmeopofborzteidtwhnducftnldhjiccmtrdqxpvahutkhlwnk
+        type: string
+      estate_id:
+        name: estate_id
+        description: ''
+        required: true
+        example: 17
+        type: integer
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/manager/houses/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the house.'
+        required: true
+        example: 18
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/manager/houses/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the house.'
+        required: true
+        example: 2
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      description:
+        name: description
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: aecgxzguhsvzergtnmcurmuqjtnqvweskwkqvusykdihgqnoxymwfdryc
+        type: string
+      address:
+        name: address
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: ylbegjyevnddhldrizawegbxyxgsbvafzemrepelkxltmrkykbgchyuaohuwgcvcbptovsiuxqbnscaewtqieincatqmtmigepdrykcnuazgyiuqcsaxkhgqsdimuzbjeobvvjzlvl
+        type: string
+      category:
+        name: category
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: tdryhhhbydkvsozcnaftiabtsjrrtebgsapduaqxnfzvsnfheqdvlebvyblwxecmymjtjhropxidcsrqwdlynggfabsnbaakrmtehnhrdfvnkatmjkxkrvetlfhuvnofprhhuvecdlfonfptydxx
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/manager/houses/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the house.'
+        required: true
+        example: 5
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/manager/visitors
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/manager/visitors
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: cxkruhpbbpzqyelemjhvigwonbqihocbwlhguiuhhloconnbkmchhjjepbghvkfujpyoyrhfbvqtertjxceuyzibopjabezahcvyuolubasmajklcfszrwcaugrqiififymjpuwoiwoihcpjmktsrwjipeprxhubrhjm
+        type: string
+      last_name:
+        name: last_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: wrmmhhobjxawqcxvenptagvqsvqsjpdlkwpjulopvjogyuhkjtsqnovelpgaiqdwvzsxqadvssjiuwqzxnaeutbsifjldkcpbdulirfxexipuktlisdipfqmqzsaqjwtysdxqsfomdhlarhlbqxtiouwxonpkwdqrvmplmqwrqxkxrflffujazamgvojibzyzhduezbqxuleajygaxxqwmpehk
+        type: string
+      address:
+        name: address
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: imzdznywehqxkyqnhwjuiyywgswgzmazcxysvfgagqfkvsbypmcdiiklwhlyrhkewywtrbybmbvoltjmcdkukxcdzxxuvjwlngsditmfbosmkalouajrfsjtwfamqxwjdincwwuvpyorscojayfrqllufytdjtogfhxtigkucxsuviweyszvgtocaguadqsjgwufjfausixukfbwduoleakhjubceacshnrtynkfdnddfszxwzldlpxf
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: false
+        example: zaxjqgurhdtqkywuxqenixdukszatnknxddbgqpjoycnnpyltduyotuohmgjrkzxxwxlbvaospvhivmrjcdeluo
+        type: string
+      phone:
+        name: phone
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: yfxjmkkqesqtatswepchwzdptrfciuxokacvyauzmbcjgbhttitepcpwemzykfmxofpiqgttotxxgqdzvoxuwbybgkexdu
+        type: string
+      estate_id:
+        name: estate_id
+        description: ''
+        required: false
+        example: null
+        type: string
+      user_id:
+        name: user_id
+        description: ''
+        required: false
+        example: null
+        type: string
+      sent_by:
+        name: sent_by
+        description: ''
+        required: false
+        example: null
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/manager/visitors/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the visitor.'
+        required: true
+        example: 16
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/manager/visitors/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the visitor.'
+        required: true
+        example: 9
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: rkhnbteqgfdvbikhbhzwbrsuqnpmttawrthomaxithskttnarftfdkpavcfthcxwvvkajaqgigcyjdedubgbtqmsstovgddvkhvgpyxaiuptcrxmmvcfxzfcroutpurcohxhpmpwjuyqygfulylfrsvfigzmkmgrxnqredhgvtqbrqywxhxhzdpakedtnjcqnqmpahzppdimmssrrrkagpvkupzidgmdd
+        type: string
+      last_name:
+        name: last_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: xwaaolluuwjludbvaywirbuicqrrkvhvrmmgqrltcpavreidrelgcwdfzaslbjnzjvjmpsutuwmzhnaujanoohennzsmhmndhuxcevxxzchmszlsvsstiwrxvnvazyfhbcdbpngjvbugakhurfvtgvigtrmavbccjcjvcrdvqeivbhxbellmxvzlbfemzbnnjelkfdioyborimmmzxkwxkpgspjctpn
+        type: string
+      address:
+        name: address
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: yifxqigrtciuyrnwoozdropxyeckmvqklqgyvsaujvovsamcfpbviohzkisyuhylouqzrpfxbrsrwdhzjndoqwwycgrgiuzktyzwpsgsge
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: false
+        example: xkxqgsghazbm
+        type: string
+      phone:
+        name: phone
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: szsdcovmzpmtoyqjtocibluparizfotzltesfpapamziryhwwjiqsjivodlyivigcbzuikzakmwvatcthphstgkonduunsyirrmlblajimvsynvhawcvfkpqjycktcogsjqxgwppmnizyclfmcstlyjtdvlqulniydgtodkqrgutaugqtcjolvoqidsvmieeszmjafzlijvb
+        type: string
+      estate_id:
+        name: estate_id
+        description: ''
+        required: false
+        example: null
+        type: string
+      user_id:
+        name: user_id
+        description: ''
+        required: false
+        example: null
+        type: string
+      sent_by:
+        name: sent_by
+        description: ''
+        required: false
+        example: null
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/manager/visitors/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the visitor.'
+        required: true
+        example: 1
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/manager/vehicles
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/manager/houses/{house_id}/users'
+    metadata:
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      house_id:
+        name: house_id
+        description: 'The ID of the house.'
+        required: true
+        example: 9
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/manager/houses/{house}/users'
+    metadata:
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      house:
+        name: house
+        description: ''
+        required: true
+        example: 2
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: qoineuypugqhffvujurimmnswnzsietzwxttjhksyfxprbmykkjrmoektiohvdpxpmdnunzbyqwblyjmtbqkzhspxejgykdyspsopbjfmlziixzqsyspskdpmmqqgjnbaskaodcegcrfjuvhsodhtacrgolbjdrw
+        type: string
+      last_name:
+        name: last_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: sdxplofslhkhwnnpnhxmqst
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: ersgavjptsavcafgujsvthipwolzfnlvuhtmmvnuyguohghuortgzvfyufogrnoqebfhpeubvbsdediximvqyfodvsoapuezrddtzrornvejykvkublkhapduarlmaiozoijzimbbutciqwwccdeqqh
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/manager/houses/{house_id}/users/{id}'
+    metadata:
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      house_id:
+        name: house_id
+        description: 'The ID of the house.'
+        required: true
+        example: 15
+        type: integer
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 7
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/manager/houses/{house_id}/users/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      house_id:
+        name: house_id
+        description: 'The ID of the house.'
+        required: true
+        example: 8
+        type: integer
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 10
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: ppxymldajvvni
+        type: string
+      last_name:
+        name: last_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: frwjrxkhscufybyambibundtnsgtlnnubghbpbganpqknimrpdfscztopezwxklrchxtkqstnungcgqnahpmfhitdhoziayxezgkxezjwuhlqfqehleomlyhwyhhsaxjnryjnrcgmuqtcnlpiwephbfsehvibmbjdgqbblahfmldangerdxglkldfanhhbflru
+        type: string
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: zwitnquwerhsfuxror
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/manager/houses/{house_id}/users/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      house_id:
+        name: house_id
+        description: 'The ID of the house.'
+        required: true
+        example: 13
+        type: integer
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 5
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
