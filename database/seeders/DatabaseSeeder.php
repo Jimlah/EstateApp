@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        Admin::factory(5)->create();
+
+        $this->call([
+            EstateSeeder::class,
+            EstateManagerSeeder::class,
+            HouseSeeder::class,
+            UserHouseSeeder::class,
+            VehicleSeeder::class
+        ]);
+
+        Admin::first()->update([
+            'email' => 'superadmin@admin.com',
+            'password' => 'password',
+        ]);
     }
 }
