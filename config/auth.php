@@ -45,7 +45,7 @@ return [
             'provider' => 'users',
         ],
         'user-api' => [
-            'driver' => 'token',
+            'driver' => 'passport',
             'provider' => 'users',
         ],
         'admin' => [
@@ -53,7 +53,7 @@ return [
             'provider' => 'admins',
         ],
         'admin-api' => [
-            'driver' => 'token',
+            'driver' => 'passport',
             'provider' => 'admins',
         ],
         'manager' => [
@@ -61,7 +61,7 @@ return [
             'provider' => 'managers',
         ],
         'manager-api' => [
-            'driver' => 'token',
+            'driver' => 'passport',
             'provider' => 'managers',
         ],
     ],
