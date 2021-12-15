@@ -11,7 +11,6 @@ class LogOutController extends Controller
     public function __invoke()
     {
         $user = Auth::user();
-
         $user->token()->revoke();
         Auth::guard('user')->logout();
 
