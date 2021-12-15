@@ -25,7 +25,8 @@ class LogInController extends Controller
             'message' => 'Login Successful',
             'status' => 'success',
             'user' => $user,
-            'token' => $user->createToken('user')->accessToken,
+            'token' => $user->createToken('user', ['admin'])->accessToken,
+            'role' => 'admin'
             // 'redirect' => route('user.dashboard')
         ]);
     }

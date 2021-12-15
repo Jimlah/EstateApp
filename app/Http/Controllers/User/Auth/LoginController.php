@@ -15,17 +15,19 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
         if (!Auth::guard('user')->attempt($credentials)) {
             return response()->json([
-                'message' => 'Invalid credentials'
+                'message' => 'Invalid credentials',
+                'status' => 'error'
             ], 401);
         }
 
-        $user = User::find(auth()->guard('user')->user()->id);
+        $user = User::find(auth()->guard('user', ['user'])->user()->id);
 
         return response()->json([
             'message' => 'Login Successful',
             'status' => 'success',
             'user' => $user,
             'token' => $user->createToken('user')->accessToken,
+            'role' => 'user'
             // 'redirect' => route('user.dashboard')
         ]);
     }
