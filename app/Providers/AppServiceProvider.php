@@ -14,11 +14,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if ($this->app->environment(['local', 'testing'])) {
+        // if ($this->app->environment(['local', 'testing'])) {
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
             $this->app->register(TelescopeServiceProvider::class);
-            $this->app->register( Styde\Enlighten\Providers\EnlightenServiceProvider::class);
-        }
+            $this->app->register(Styde\Enlighten\Providers\EnlightenServiceProvider::class);
+        // }
     }
 
     /**
