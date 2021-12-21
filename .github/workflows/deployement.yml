@@ -18,7 +18,7 @@ jobs:
             cd repositories/EstateApp
             (php artisan down --message 'The app is being (quickly!) updated. Please try again in a minute.') || true
             git pull
-            composer install --no-interaction --prefer-dist --optimize-autoloader
+            composer install
             php artisan key:generate
             php artisan migrate --force
             Php artisan passport:install
