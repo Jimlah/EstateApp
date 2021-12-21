@@ -21,6 +21,7 @@ jobs:
             composer install
             php artisan key:generate
             php artisan migrate:fresh --force
+            php artisan db:seed
             Php artisan passport:install
             php artisan queue:restart
             php artisan optimize
