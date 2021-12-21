@@ -20,7 +20,7 @@ jobs:
             git pull
             composer install
             php artisan key:generate
-            php artisan migrate --force
+            php artisan migrate:fresh --force
             Php artisan passport:install
             composer install --optimize-autoloader --no-dev
             php artisan queue:restart
