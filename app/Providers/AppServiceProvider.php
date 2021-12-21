@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Telescope\TelescopeServiceProvider;
+use Styde\Enlighten\Providers\EnlightenServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment(['local', 'testing'])) {
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
             $this->app->register(TelescopeServiceProvider::class);
-            $this->app->register(Styde\Enlighten\Providers\EnlightenServiceProvider::class);
+            $this->app->register(EnlightenServiceProvider::class);
         }
     }
 
