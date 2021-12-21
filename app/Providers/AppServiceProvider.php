@@ -5,6 +5,7 @@ namespace App\Providers;
 use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Telescope\TelescopeServiceProvider;
+use Schema;
 use Styde\Enlighten\Providers\EnlightenServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -30,6 +31,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Schema::defaultStringLength(191);
     }
 }
