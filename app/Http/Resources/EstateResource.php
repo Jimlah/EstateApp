@@ -21,7 +21,7 @@ class EstateResource extends JsonResource
             'logo' => $this->logo,
             'code' => $this->code,
             'manager' => $this->whenLoaded('managers', function () {
-                return ManagerResource::collection($this->managers);
+                return new ManagerResource($this->managers->where('is_admin', true)->first());
             }),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
