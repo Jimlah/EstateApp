@@ -23,8 +23,8 @@ class EstateResource extends JsonResource
             'manager' => $this->whenLoaded('managers', function () {
                 return new ManagerResource($this->managers->where('is_admin', true)->first());
             }),
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'created_at' => $this->created_at->format('Y-m-d'),
+            'updated_at' => $this->updated_at->format('Y-m-d'),
         ];
     }
 }
