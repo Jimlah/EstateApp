@@ -14,6 +14,12 @@ class HouseResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'estate' => new EstateResource($this->estate),
+            'category' => $this->category,
+            'code' => $this->code,
+            'created_at' => $this->created_at->format('Y-m-d'),
+        ];
     }
 }
