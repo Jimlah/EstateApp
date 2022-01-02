@@ -19,13 +19,13 @@ class LogInController extends Controller
             ], 401);
         }
 
-        $user = Manager::find(auth()->guard('user', ['manager'])->user()->id);
+        $user = Manager::find(auth()->guard('manager')->user()->id);
 
         return response()->json([
             'message' => 'Login Successful',
             'status' => 'success',
             'user' => $user,
-            'token' => $user->createToken('user')->accessToken,
+            'token' => $user->createToken('user', ['manager'])->accessToken,
             'role' => 'manager'
             // 'redirect' => route('user.dashboard')
         ]);
