@@ -18,7 +18,7 @@ class EstateController extends Controller
     {
         $estates = request()->user()->estates;
 
-        return response()->json(EstateResource::collection($estates));
+        return response()->json(EstateResource::collection($estates)->response()->getData(true));
     }
 
     /**
