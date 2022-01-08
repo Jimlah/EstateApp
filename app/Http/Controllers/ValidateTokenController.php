@@ -16,7 +16,7 @@ class ValidateTokenController extends Controller
             $status = true;
         }
         return response()->json([
-            'status' => true,
+            'status' => $status,
         ]);
     }
 }
