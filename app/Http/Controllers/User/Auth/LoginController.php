@@ -20,13 +20,13 @@ class LoginController extends Controller
             ], 401);
         }
 
-        $user = User::find(auth()->guard('user', ['user'])->user()->id);
+        $user = User::find(auth()->guard('user')->user()->id);
 
         return response()->json([
             'message' => 'Login Successful',
             'status' => 'success',
             'user' => $user,
-            'token' => $user->createToken('user')->accessToken,
+            'token' => $user->createToken('user', ['user'])->accessToken,
             'role' => 'user'
             // 'redirect' => route('user.dashboard')
         ]);
