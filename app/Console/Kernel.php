@@ -17,7 +17,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         Log::info("Queues are working");
-        $schedule->command('queue:work')->everyMinute()->withoutOverlapping();
+        $schedule->command('queue:work')->everyMinute()->withoutOverlapping()->runInBackground();
     }
 
     /**
