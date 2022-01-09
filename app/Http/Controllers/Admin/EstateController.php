@@ -49,7 +49,7 @@ class EstateController extends Controller
 
         $estate->managers()->sync($manager->id, ['is_admin' => true]);
 
-        dispatch_sync(new UserRegisteredJob($manager, $password));
+        dispatch(new UserRegisteredJob($manager, $password));
 
         return response()->json([
             'message' => 'Estate created successfully',

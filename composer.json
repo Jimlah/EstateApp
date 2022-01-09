@@ -12,7 +12,8 @@
         "laravel/passport": "^10.2",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "pelmered/fake-car": "^1.7"
+        "pelmered/fake-car": "^1.7",
+        "wildbit/swiftmailer-postmark": "^3.3"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.10",
