@@ -3,7 +3,8 @@
 namespace App\Jobs;
 
 use App\Mail\NewUser;
-use App\Models\User;
+use App\Models\Admin;
+use Illuminate\Support\Str;
 use Illuminate\Bus\Queueable;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Queue\SerializesModels;
@@ -11,9 +12,8 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
-use Illuminate\Support\Str;
 
-class UserRegisteredJob implements ShouldQueue
+class AdminCreatedJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -24,12 +24,12 @@ class UserRegisteredJob implements ShouldQueue
      *
      * @return void
      */
-    public function __construct(public User $user)
+    public function __construct(public Admin $admin)
     {
-        $this->user = $user;
+        $this->admin = $admin;
         $this->password = Str::random(6);
 
-        $this->user->update([
+        $this->admin->update([
             'password' => $this->password,
         ]);
     }
@@ -41,7 +41,6 @@ class UserRegisteredJob implements ShouldQueue
      */
     public function handle()
     {
-        Mail::to($this->user->email)
-            ->send(new NewUser($this->user, $this->password));
+        Mail::to($this->user->email)->send(new NewUser($this->user, $this->password));
     }
 }

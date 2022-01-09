@@ -1,5 +1,7 @@
 @component('mail::message')
-    # Hello {{ $user->first_name }},
+    # Login Details
+
+    Hello {{ $user->first_name }},
 
     Your account has been created.
     Below are your login details.
@@ -8,6 +10,6 @@
     Password: {{ $password }}
 
 
-    Thanks,<br>
+    Thanks,
     {{ config('app.name') }}
 @endcomponent

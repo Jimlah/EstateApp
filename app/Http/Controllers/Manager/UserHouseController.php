@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
 use App\Http\Requests\UserHouseRequest;
+use App\Jobs\UserRegisteredJob;
 
 class UserHouseController extends Controller
 {
@@ -32,8 +33,9 @@ class UserHouseController extends Controller
      */
     public function store(UserHouseRequest $request, House $house)
     {
-        $data = array_merge($request->validated(), ['password' => Str::random(6)]);
-        $user = User::create($data);
+        $user = User::create($request->validated());
+
+        dispatch(new UserRegisteredJob($user));
 
         $house->users()->attach($user->id, ['is_admin' => true]);
 

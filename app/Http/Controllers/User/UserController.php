@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
+use App\Jobs\UserRegisteredJob;
 
 class UserController extends Controller
 {
@@ -33,8 +34,11 @@ class UserController extends Controller
      */
     public function store(UserRequest $request)
     {
-        $data = array_merge($request->validated(), ['password' => Str::random(6)]);
+        $password = Str::random(6);
+        $data = array_merge($request->validated(), ['password' => $password]);
         $user = User::create($data);
+
+        dispatch(new UserRegisteredJob($user, $password));
 
         request()->user()->houses()->findOrFail($request->house_id)->users()->attach($user->id);
 
