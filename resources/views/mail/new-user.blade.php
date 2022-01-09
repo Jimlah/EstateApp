@@ -1,18 +1,20 @@
 @component('mail::message')
-    # Login Details
+# Login Details
 
-    Hello {{ $user->first_name }},
+Hello {{ $user->first_name }},
 
-    Your account has been created.
-    Below are your login details.
+Your account has been created.
+Below are your login details.
 
-    Email: {{ $user->email }}
-    Password: {{ $password }}
+Email: {{ $user->email }}
 
-    @component('mail::button', ['url' => env('FRONTEND_APP_URL')])
-        Login
-    @endcomponent
+Password: {{ $password }}
 
-    Thanks,
-    {{ config('app.name') }}
+@component('mail::button', ['url' => env('FRONTEND_APP_URL')])
+    Login
+@endcomponent
+
+Thanks,
+
+{{ config('app.name') }}
 @endcomponent
