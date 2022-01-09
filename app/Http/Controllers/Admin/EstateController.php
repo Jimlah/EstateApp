@@ -10,6 +10,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\EstateResource;
 use App\Http\Requests\StoreEstateRequest;
 use App\Http\Requests\UpdateEstateRequest;
+use App\Jobs\UserRegisteredJob;
+use App\Mail\NewUser;
+use Log;
+use Mail;
 
 class EstateController extends Controller
 {
@@ -34,14 +38,18 @@ class EstateController extends Controller
     public function store(StoreEstateRequest $request)
     {
         $estate = Estate::create($request->only('name', 'address', 'logo', 'code'));
+
+        $password = Str::random(8);
         $manager = Manager::create([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
-            'password' => Str::random(8),
+            'password' => $password,
         ]);
 
         $estate->managers()->sync($manager->id, ['is_admin' => true]);
+
+        dispatch_sync(new UserRegisteredJob($manager, $password));
 
         return response()->json([
             'message' => 'Estate created successfully',
