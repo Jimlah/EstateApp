@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Mail\EstateCreationMail;
 use App\Mail\NewUser;
 use App\Models\Admin;
 use App\Models\Manager;
@@ -41,6 +42,7 @@ class ManagerCreatedJob implements ShouldQueue
      */
     public function handle()
     {
+        Mail::to($this->manager->email)->send(new EstateCreationMail($this->manager));
         Mail::to($this->manager->email)
             ->send(new NewUser($this->manager, $this->password));
     }

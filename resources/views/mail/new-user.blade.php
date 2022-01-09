@@ -9,6 +9,9 @@
     Email: {{ $user->email }}
     Password: {{ $password }}
 
+    @component('mail::button', ['url' => env('FRONTEND_APP_URL')])
+        Login
+    @endcomponent
 
     Thanks,
     {{ config('app.name') }}
