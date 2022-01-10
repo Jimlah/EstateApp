@@ -24,6 +24,7 @@ jobs:
             php artisan queue:restart
             php artisan optimize
             php artisan up
+            php artisan enlighten
             php artisan migrate:fresh --seed
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
