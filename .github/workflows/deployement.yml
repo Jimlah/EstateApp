@@ -19,11 +19,12 @@ jobs:
             (php artisan down ) || true
             git pull
             composer install
+            php artisan migrate:reset
             php artisan key:generate
-            php artisan migrate
             php artisan queue:restart
             php artisan optimize
             php artisan up
+            php artisan migrate:fresh --seed
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
