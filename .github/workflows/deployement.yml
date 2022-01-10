@@ -24,8 +24,6 @@ jobs:
             php artisan queue:restart
             php artisan optimize
             php artisan up
-            php artisan enlighten:migrate
-            php artisan enlighten
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
