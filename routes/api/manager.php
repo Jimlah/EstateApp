@@ -11,12 +11,14 @@ use App\Http\Controllers\Manager\UserHouseController;
 use App\Http\Controllers\Manager\Auth\LogInController;
 use App\Http\Controllers\Manager\Auth\LogOutController;
 use App\Http\Controllers\Manager\EstateController;
+use App\Http\Controllers\Manager\UserController;
 
 Route::post('manager/login', LogInController::class)->name('manager.login');
 Route::group(['prefix' => 'manager', 'middleware' => ['auth:manager-api', 'scopes:manager'], 'as' => 'manager.'], function () {
     Route::get('validate-token', ValidateTokenController::class)->name('validate-token');
     Route::get('/logout', LogOutController::class)->name('logout');
     Route::get('dashboard', DashboardController::class)->name('dashboard');
+    Route::get('users', UserController::class)->name('users');
 
     Route::apiResource('estates', EstateController::class);
     Route::apiResource('managers', AdminController::class);

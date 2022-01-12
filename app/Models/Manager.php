@@ -52,5 +52,4 @@ class Manager extends Authenticatable
     {
         return $this->belongsToMany(Estate::class, 'estate_managers', 'manager_id', 'estate_id');
     }
-
 }
