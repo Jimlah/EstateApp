@@ -2,6 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Estate;
+use App\Models\Manager;
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 
 class VisitorRequest extends FormRequest
@@ -33,5 +36,22 @@ class VisitorRequest extends FormRequest
             'user_id' => 'sometimes|exists:users,id',
             'sent_by' => 'sometimes',
         ];
+    }
+
+    public function afterValidation()
+    {
+
+        if(request()->user() instanceof Manager ) {
+            $this->merge([
+                'sent_by' => Estate::class,
+            ]);
+        }
+
+        if(request()->user() instanceof User ) {
+            $this->merge([
+                'sent_by' => User::class,
+            ]);
+        }
+
     }
 }
