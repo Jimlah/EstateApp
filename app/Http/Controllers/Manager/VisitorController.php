@@ -6,10 +6,20 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\VisitorRequest;
 use App\Http\Resources\VisitorResource;
 use App\Models\Visitor;
+use App\Notifications\RequestVisitorApproval;
+use App\Notifications\VisitorDataUpdated;
+use App\Services\VisitorServices;
 use Illuminate\Http\Request;
 
 class VisitorController extends Controller
 {
+    public $visitorServices;
+
+    public function __construct(VisitorServices $visitorServices)
+    {
+        $this->visitorServices = $visitorServices;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -32,7 +42,11 @@ class VisitorController extends Controller
      */
     public function store(VisitorRequest $request)
     {
-        Visitor::create($request->validated());
+        $this->visitorServices
+            ->create($request->validated())
+            ->getUser()
+            ->getManagers()
+            ->notify(RequestVisitorApproval::class);
 
         return response()->json([
             'message' => 'Visitor created successfully',
@@ -60,7 +74,10 @@ class VisitorController extends Controller
      */
     public function update(VisitorRequest $request, Visitor $visitor)
     {
-        $visitor->update($request->validated());
+        $this->visitorServices->update($visitor, $request->validated())
+            ->getUser()
+            ->getManagers()
+            ->notify(VisitorDataUpdated::class);
 
         return response()->json([
             'message' => 'Visitor updated successfully',
